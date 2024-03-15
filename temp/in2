@@ -1,0 +1,32 @@
+<nav>
+  <div class="row1">
+    <div class="logo">
+      <!-- Insert your company logo here -->
+      <img src="company-logo.png" alt="Company Logo" />
+    </div>
+    <div class="right-menu">
+      <div class="language-dropdown">
+        <!-- Language Dropdown -->
+        <select>
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+        </select>
+      </div>
+      <div class="donate-btn">
+        <a href="#">Donate</a>
+      </div>
+      <div class="login-icon">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="quick-links">
+      <ul>
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">Partner With Us</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
