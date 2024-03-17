@@ -18,29 +18,55 @@
     <header>
 
       <div class="navbar">
+
         <div class="nav-logo">
-          <div class="logo"></div>
+          <img src="media/navLogo.png" class="logo" alt="nav-logo">
         </div>
 
         <div class="nav-item">
-            <p>who we are</p>
-            <i class="fa-solid fa-angle-down"></i> 
+            <div class="dropdown">
+                <p>who we are</p>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <a href="#">About Us</a>
+                    <a href="#">Vision & Mission</a>
+                    <a href="#">Our Team</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <p>partner with us</p>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <a href="#">Sponsor Meal</a>
+                    <a href="#">Volunteer Opportunities</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <p>media gallery</p>
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <a href="#">Photos</a>
+                    <a href="#">Videos</a>
+                    <a href="#">Awards & Recognisation</a>
+                    <a href="#">Alumni Network</a>
+                </div>
+            </div>
+            <a href="./temp/init.html" ><button class="nav-butn" id="sponsor-meal"><b>SPONSOR MEAL <i class="fa-solid fa-bowl-food"></i></b></button></a>
 
-            <p>partner with us</p>
-            <i class="fa-solid fa-angle-down"></i> 
-
-            <p>media gallery</p>
-            <i class="fa-solid fa-angle-down"></i> 
-
-            <button class="nav-butn" id="sponsor-meal"><b>SPONSOR MEAL .<i class="fa-solid fa-bowl-food"></i>
-            </b></button>
-        </div>
-
-        <i class="fa-solid fa-id-badge" id ="login"></i> 
-            
+            <a href="./temp/init.html" ><i class="fa-solid fa-id-badge" id ="login"></i></a>
+          </div>        
         </div>
       </div>
-
     </header>
+
+    <div class="slider">
+      <div class="slides">
+          <img src="./media/slide1.png">
+          <img src="./media/slide2.png">
+          <img src="./media/slide3.png">
+          <img src="./media/slide4.png">
+      </div>
+    </div>
+
   </body>
 </html>
