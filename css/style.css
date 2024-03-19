@@ -388,8 +388,39 @@ Parallax effect Code Starts
   margin-bottom: 18px;
 }
 
-.section-contact {
-  height: 83vh;
+/* ===========================================
+Contact Section Code Starts 
+======================================= */
+.section-contact-main {
+  max-width: 700px;
+  margin: 0 auto;
+  transition: all 0.3s linear;
+}
+
+.section-contact-main .grid {
+  gap: 32px;
+}
+.section-contact-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-contact-main input,
+.section-contact-main select,
+.section-contact-main textarea {
+  padding: 12px 20px;
+  border: 1px solid var(--para);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "work sans";
+  width: 100%;
+}
+
+.section-contact-main input[type="submit"] {
+  max-width: 90px;
+  padding: 10px 15px;
+  border: none;
 }
 
 /* ===========================================
