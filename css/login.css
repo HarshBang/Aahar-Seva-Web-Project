@@ -1,0 +1,80 @@
+/*=========================================== 
+Login Page Nav-Bar Section Starts
+========================================== */
+
+.navbar-admin {
+  height: 90px;
+  border: var(--orgColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 0.5px solid var(--para);
+}
+
+.nav-logo-admin {
+  filter: invert(100%) grayscale(100%);
+  margin-left: 25px;
+}
+
+/*=========================================== 
+Form Section Code Starts
+========================================== */
+.section-login {
+  background-color: var(--offwhite);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+
+.navbar-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item-admin i {
+  margin-right: 30px;
+  font-size: 23px;
+  color: var(--orgColor);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid var(--orgColor);
+  border-radius: 8px;
+}
+
+.login-btn {
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.login-reset-h3 {
+  font-size: 15px;
+  margin-top: 7px;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.rememberMe label {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}

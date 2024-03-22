@@ -71,7 +71,7 @@ NavBar Code Starts
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   box-shadow: var(--shadow);
 }
 
@@ -106,6 +106,7 @@ header {
   display: inline;
   text-transform: capitalize;
   color: var(--white);
+  font-size: 16px;
 }
 
 .login {
@@ -148,6 +149,17 @@ header {
   to {
     opacity: 1;
   }
+}
+
+.mobile-nav-icon {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
 }
 
 /* ===========================================
@@ -217,6 +229,16 @@ Resuable Code Section Starts
 /* ===========================================
 Hero Section Slider Code Starts 
 ======================================= */
+/* .hero-slider {
+  height: 100vh;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+} */
 .slider {
   width: 100%;
   height: cal(100vh - 90px);
@@ -267,7 +289,6 @@ Hero Section Slider Code Starts
 .num {
   height: 100vh;
 }
-
 /* ===========================================
 About Section Code Starts 
 ======================================= */
@@ -409,7 +430,7 @@ Contact Section Code Starts
 .section-contact-main input,
 .section-contact-main select,
 .section-contact-main textarea {
-  padding: 12px 20px;
+  padding: 12px 15px;
   border: 1px solid var(--para);
   border-radius: 5px;
   font-size: 16px;
@@ -418,7 +439,7 @@ Contact Section Code Starts
 }
 
 .section-contact-main input[type="submit"] {
-  max-width: 90px;
+  max-width: 150px;
   padding: 10px 15px;
   border: none;
 }
@@ -426,8 +447,71 @@ Contact Section Code Starts
 /* ===========================================
 Footer Code Starts 
 ======================================= */
-footer {
+.section-footer {
   background-color: var(--orgColor);
-  padding: 20px 0px;
-  height: 7vh;
+  transition: all 0.7s linear;
 }
+
+.section-footer h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.f-about p {
+  color: var(--offwhite);
+  text-align: left;
+  font-size: 16px;
+}
+
+.f-links ul,
+.f-servies ul,
+.f-address address {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+
+.f-links li,
+.f-links a,
+.f-servies li,
+.f-servies a,
+.f-address a {
+  font-size: 16px;
+  color: var(--offwhite);
+  text-transform: capitalize;
+}
+
+.f-links span,
+.f-servies span,
+.f-address span {
+  margin-right: 12px;
+  color: var(--initBtn);
+}
+
+.f-address p,
+.f-address p a {
+  font-style: normal;
+}
+
+.f-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 35px;
+  margin: 20px 0;
+  color: var(--loginClr);
+}
+
+.f-credits {
+  margin-top: 30px;
+}
+
+.footer a:hover,
+.footer a:active {
+  color: var(--para);
+}
+
+/* ===========================================
+Media query Code Starts 
+======================================= */
