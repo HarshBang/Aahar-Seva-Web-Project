@@ -63,7 +63,7 @@ li {
   list-style: none;
 }
 
-/* font, gradient?, h1 h2 h3 default set */
+/* font, gradient? */
 
 /* ===========================================
 NavBar Code Starts 
@@ -71,7 +71,9 @@ NavBar Code Starts
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   box-shadow: var(--shadow);
 }
 
