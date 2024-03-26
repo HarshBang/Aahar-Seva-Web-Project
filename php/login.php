@@ -16,9 +16,15 @@
         min-height: 100vh;
         margin: 0;
       }
+      .error-message {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+      }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!--
     ===========================================
     NavBar Code Starts 
@@ -40,6 +46,14 @@
     <div class="section section-login">
       <h2 class="common-heading">Login Sevak</h2>
 
+      <?php
+      session_start();
+      if (isset($_SESSION['error_message']) && !empty($_SESSION['error_message'])) {
+          echo "<div class='error-message'>" . $_SESSION['error_message'] . "</div>";
+          unset($_SESSION['error_message']);
+      }
+      ?>
+
       <form id="loginForm" action="../php/admin_signin_val.php" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required />
@@ -54,7 +68,7 @@
 
         <button type="submit" class="btn login-btn">Login</button>
       </form>
-      <a href="reset.html"><h3 class="login-reset-h3">Forgot password?</h3></a>
+      <a href="../php/reset.php"><h3 class="login-reset-h3">Forgot password?</h3></a>
     </div>
 
     <!--
@@ -97,5 +111,5 @@
             }
         });
     </script>
-  </body>
+</body>
 </html>
