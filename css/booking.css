@@ -72,10 +72,10 @@ input {
   ========================================== */
 .section-booking2 {
   background-color: var(--offwhite);
-  padding: 20px;
+  padding: 30px 30px;
   border-radius: 8px;
   box-shadow: var(--shadow);
-  width: 400px;
+  width: 1000px;
   text-align: center;
   margin: auto;
 }
@@ -83,25 +83,34 @@ input {
 .section-booking2 .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.section-booking2 .label {
-  margin-top: 10px;
+.section-booking2 .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.section-booking2 .form-group {
+  flex: 1;
+}
+
+.section-booking2 label {
   display: block;
+  margin-bottom: 5px;
 }
 
 .section-booking2 select,
 .section-booking2 input[type="text"],
 .section-booking2 input[type="date"] {
   padding: 10px;
-  margin: 8px 0;
-  width: 100%;
+  margin: 10px 0;
+  width: calc(100% - 22px); /* Adjust width to account for padding and border */
   border: 1px solid var(--orgColor);
   border-radius: 8px;
 }
 
 .section-booking2 .submit-btn {
   margin-top: 15px;
-  border-radius: 8px;
+  padding: 10px 20px;
 }
