@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/booking.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
     <style>
       body {
@@ -37,31 +38,16 @@
     ===========================================
     form Code Starts 
     ======================================= -->
-      <?php
-      // // Start the session
-      // session_start();
-
-      // // Check if the sponsor_id is set in the session
-      // if(isset($_SESSION['sponsor_id'])) {
-      //     // Retrieve the sponsor_id from the session
-      //     $sponsor_id = $_SESSION['sponsor_id'];
-
-      //     // Print the sponsor_id within an h2 tag
-      //     // echo "<h2>Sponsor ID: $sponsor_id</h2>";
-      // } else {
-      //     // Handle the case when sponsor_id is not set in the session
-      //     echo "<h2>Sponsor ID not found!</h2>";
-      // }
-      ?>
-      
       <div class="section section-booking2">
+      <div ng-app="bookingApp" ng-controller="BookingController">
+
       <h2 class="common-heading">Book Your slot carefully</h2>
 
       <form id="bookingForm" action="../php/booking_process2.php" method="post" class="form">
         <div class="form-row">
           <div class="form-group">
             <label for="sponsorFor">Sponsor For:</label>
-            <input type="text" id="sponsorFor" name="sponsorFor" placeholder="Name" required />
+            <input type="text" id="sponsorFor" name="sponsorFor" placeholder="Full Name" required />
           </div>
 
           <div class="form-group">
@@ -83,7 +69,7 @@
         <div class="form-row">
           <div class="form-group">
             <label for="location">Location:</label>
-            <select name="location" id="location" required>
+            <select name="location" id="location" ng-model="location" ng-change="calculateTotalCharges()" ng-init="location='nilouferHospital'" required>
               <option value="nilouferHospital">Niloufer Hospital, Redhills</option>
               <option value="publicGarden">Public Garden, Nampally</option>
               <option value="maternityHospital">Maternity Hospital, Petlaburg</option>
@@ -97,21 +83,22 @@
 
           <div class="form-group">
             <label for="slot">Slot:</label>
-            <select name="slot" id="slot" class="drop-down" required>
+            <select name="slot" id="slot" ng-model="slot" ng-change="calculateTotalCharges()" ng-init="slot='7:00 am - 7:15 am'" required>
               <option value="">Select</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="food">Item:</label>
-            <input type="text" id="food" name="food" required>
+            <input type="text" id="food" name="food" required readonly>
           </div>
         </div>
         
+        <div>Total Charges: <span ng-bind="totalCharges"></span></div>
         <button type="submit" class="btn submit-btn">BOOK SLOT</button>
       </form>
       </div>
-
+      </div>
     <!--
     ===========================================
     footer Code Starts 
@@ -210,6 +197,44 @@
     populateSlots();
     populateFoodItems();
 
+    // ===========================================
+    // angular js Code Starts 
+    // ===========================================
+
+      // Define your AngularJS module
+      var bookingApp = angular.module('bookingApp', []);
+
+      // Define the controller for the booking form
+      bookingApp.controller('BookingController', function($scope) {
+          // Initialize totalCharges
+          $scope.totalCharges = 0;
+
+          // Define a function to calculate total charges
+          $scope.calculateTotalCharges = function() {
+              var location = $scope.location;
+              var slot = $scope.slot;
+
+              // Define charges based on the location
+              var chargesMap = {
+                  nilouferHospital: 2500,
+                  publicGarden: 2500,
+                  deafAndDumbOrphanage: 2500,
+                  maternityHospital: 1500,
+                  shyamMandir: 1000,
+                  donBoscoOrphanage: 1000,
+                  bassOrphanage: 1000,
+                  devnarBlindSchool: 4000
+              };
+
+              // Calculate total charges based on the selected location
+              $scope.totalCharges = chargesMap[location] || 0;
+          };
+
+          // Call calculateTotalCharges initially and whenever form inputs change
+          $scope.$watchGroup(['location', 'slot'], function() {
+              $scope.calculateTotalCharges();
+          });
+      });
 
     </script>
 </body>

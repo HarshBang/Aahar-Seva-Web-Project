@@ -72,7 +72,7 @@ input {
   ========================================== */
 .section-booking2 {
   background-color: var(--offwhite);
-  padding: 30px 30px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: var(--shadow);
   width: 1000px;
@@ -89,6 +89,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 25px;
 }
 
 .section-booking2 .form-group {
@@ -105,12 +106,27 @@ input {
 .section-booking2 input[type="date"] {
   padding: 10px;
   margin: 10px 0;
-  width: calc(100% - 22px); /* Adjust width to account for padding and border */
+  width: calc(100% - 22px);
   border: 1px solid var(--orgColor);
   border-radius: 8px;
 }
 
 .section-booking2 .submit-btn {
-  margin-top: 15px;
+  margin: 25px auto; /* Center the button */
+  margin-bottom: 0px;
   padding: 10px 20px;
+  display: inline-block; /* Make button a proper rectangle */
+  border: none;
+  border-radius: 5px;
+  background-color: var(--initBtn);
+  cursor: pointer;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.section-booking2 .submit-btn:hover,
+.section-booking2 .submit-btn:active {
+  background-color: var(--hovrBtn);
 }
