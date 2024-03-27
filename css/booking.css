@@ -1,0 +1,107 @@
+/*=========================================== 
+Login Page Nav-Bar Section Starts
+========================================== */
+.navbar-booking {
+  height: 90px;
+  border: var(--orgColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 0.5px solid var(--para);
+  background-color: var(--white);
+}
+
+.nav-logo-booking {
+  filter: invert(100%) grayscale(100%);
+  margin-left: 25px;
+}
+
+/*=========================================== 
+  Form Section Code Starts
+  ========================================== */
+.page-heading {
+  margin-top: 50px;
+}
+
+.section-booking {
+  background-color: var(--offwhite);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+
+.navbar-booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item-booking i {
+  margin-right: 30px;
+  font-size: 23px;
+  color: var(--orgColor);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  gap: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid var(--orgColor);
+  border-radius: 8px;
+}
+
+.nxt-btn {
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+/*=========================================== 
+  Form2 Section Code Starts
+  ========================================== */
+.section-booking2 {
+  background-color: var(--offwhite);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+.section-booking2 .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-booking2 .label {
+  margin-top: 10px;
+  display: block;
+}
+
+.section-booking2 select,
+.section-booking2 input[type="text"],
+.section-booking2 input[type="date"] {
+  padding: 10px;
+  margin: 8px 0;
+  width: 100%;
+  border: 1px solid var(--orgColor);
+  border-radius: 8px;
+}
+
+.section-booking2 .submit-btn {
+  margin-top: 15px;
+  border-radius: 8px;
+}
