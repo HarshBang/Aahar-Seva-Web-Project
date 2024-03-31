@@ -3,7 +3,7 @@
 require_once 'db_config.php';
 
 // Query to retrieve booking requests data excluding confirmed bookings
-$query = "SELECT * FROM bookings WHERE status != 'confirmed'";
+$query = "SELECT * FROM bookings WHERE status = 'confirmed'";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aahar Sevak</title>
+    <title>Confirmed Bookings</title>
     
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/login.css" />
@@ -80,22 +80,10 @@ $result = mysqli_query($conn, $query);
             margin-right: 4px;
         }
 
-        .action-btn {
-            background-color: #0c0c33;
-        }
-        .action-btn:hover,
-        .action-btn:active{
-            background-color: #046a38;
-        }
-
         .main-content-btns{
             margin-bottom: 40px;
             display: flex;
             justify-content: center;
-        }
-
-        footer {
-            margin-top: 100px;
         }
     </style>
 </head>
@@ -126,11 +114,11 @@ $result = mysqli_query($conn, $query);
         <div class="main-content">
             <h2 class="common-heading">Welcome Admin</h2>
             <div class="main-content-btns">
-            <a href="../php/confirmed_booking.php" ><button class="btn">Confirmed Booking</button></a>
+            <a href="../php/admin_booking.php" ><button class="btn">Pending Request</button></a>
             <button class="btn">on-hold Booking</button>
             <button class="btn">past Booking</button>
             </div>
-            <p>Here are pending booking requests:</p>
+            <p>Here are past confirmed bookings:</p>
             <table>
                 <thead>
                     <tr>
@@ -142,7 +130,6 @@ $result = mysqli_query($conn, $query);
                         <th>Slot</th>
                         <th>Total Price</th>
                         <th>Food Item</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -163,13 +150,6 @@ $result = mysqli_query($conn, $query);
                         echo "<td>" . $row['slots'] . "</td>";
                         echo "<td>" . $row['total_price'] . "</td>";
                         echo "<td>" . $row['food_item'] . "</td>";
-                        // Add hidden fields to hold row values
-                        echo "<input type='hidden' name='booking_id' value='" . $row['booking_id'] . "'>";
-                        echo "<input type='hidden' name='action' value=''>";
-                        // Add buttons for confirmation and holding actions
-                        echo "<td>";
-                        echo "<button class='btn action-btn' type='submit' name='action' value='confirm'>Confirm</button>";
-                        echo "<button class='btn action-btn' type='submit' name='action' value='hold'>Hold</button>";
                         echo "</td>";
                         echo "</tr>";
                         // Close the form for each row
@@ -182,13 +162,6 @@ $result = mysqli_query($conn, $query);
                 </tbody>
             </table>
 
-    <!--
-    ===========================================
-    footer Code Starts 
-    ======================================= -->
-    <footer>
-    <div class="f-credits"><p class="f-credits">Copyright ©2024 All rights reserved | This website is made with &#x2764 by Harsh Bang</p></div>
-    </footer>
-</div> 
+    </div>
 </body>
 </html>
