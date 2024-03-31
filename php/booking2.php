@@ -52,7 +52,7 @@
 
           <div class="form-group">
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required/>
+            <input type="date" id="date" name="date" required min="<?php echo date('Y-m-d'); ?>"/>
           </div>
 
           <div class="form-group">
@@ -109,6 +109,12 @@
     ===========================================
     js Code Starts 
     ======================================= -->
+
+    <script> // date validation while booking
+    // Set min attribute for date input field to today's date
+    document.getElementById('date').min = new Date().toISOString().split('T')[0];
+    </script>
+
     <script>
     // Define available slots for each location
     const slotTimes = {
