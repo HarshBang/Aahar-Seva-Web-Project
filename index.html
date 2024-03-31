@@ -170,21 +170,21 @@
       </div>
 
       <div class="section-contact-main contact-container">
-        <form action="#">
+        <form action="https://formspree.io/f/mpzvyyna" method="POST">
           
           <div class="grid grid-two-column">
             <div>
               <label for="username"></label>
-              <input type="text" name="username" id="username" placeholder="username">
+              <input type="text" name="username" id="username" placeholder="username" required>
             </div>
             <div>
               <label for="email"></label>
-              <input type="text" name="email" id="email" placeholder="demo@gmail.com">
+              <input type="email" name="email" id="email" placeholder="demo@mail.com" required>
             </div>
           </div>
 
           <div>
-            <select name="query">
+            <select name="query" required>
               <option value="q">query related to</option>
               <option value="donation">Donation</option>
               <option value="volunteering">volunteering</option>
@@ -194,7 +194,7 @@
 
           <div>
             <label for="textarea"></label>
-            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="comment here..."></textarea>
+            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="comment here..." required min="5"></textarea>
           </div>
 
           <div>
