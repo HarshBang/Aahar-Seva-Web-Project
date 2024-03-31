@@ -943,7 +943,6 @@ class PHPMailer
             $this->ContentType = static::CONTENT_TYPE_PLAINTEXT;
         }
     }
-
     /**
      * Send messages using SMTP.
      */

@@ -234,7 +234,6 @@ class SMTP
      * @var array|null
      */
     protected $server_caps;
-
     /**
      * The most recent reply received from the server.
      *

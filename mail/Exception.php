@@ -20,7 +20,6 @@
  */
 
 namespace PHPMailer\PHPMailer;
-
 /**
  * PHPMailer exception handler.
  *
