@@ -7,7 +7,7 @@ $sponsor_phone = $_POST['phoneNumber'];
 $sponsor_email = $_POST['sponsor_email'];
 
 // Check if the sponsor already exists in the database
-$query = "SELECT * FROM sponsors WHERE sponsor_phone = '$sponsor_phone'";
+$query = "SELECT * FROM sponsors WHERE sponsor_phone = '$sponsor_phone' AND sponsor_email = '$sponsor_email'";
 $result = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($result) > 0) {

@@ -95,7 +95,7 @@
         </div>
         
         <div>Total Charges: <span ng-bind="totalCharges"></span></div>
-        <button type="submit" class="btn submit-btn">BOOK SLOT</button>
+        <button type="submit" class="btn submit-btn"><b>BOOK SEVA</b></button>
       </form>
       </div>
       </div>
