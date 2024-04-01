@@ -65,3 +65,5 @@
     ======================================= -->
     <div class="f-credits"><p class="f-credits">Copyright ©2024 All rights reserved | This website is made with &#x2764 by Harsh Bang</p></div>
     
+</body>
+</html>
