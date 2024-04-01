@@ -17,21 +17,22 @@
         min-height: 100vh;
         margin: 0;
       }
-      .main{
-        height: 80vh;
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        height: 75vh;
       }
 
-      .main p{
-        margin-top: 260px;
+
+      .main p {
         font-size: 30px;
+        margin: 0; 
       }
 
-      .main .p_two{
-        margin-top: 0; 
-      }
-
-      .f-credits p{
-        font-size: 20px;
+      .back-button {
+        margin-top: 20px; 
       }
     </style>
 </head>
@@ -55,8 +56,9 @@
     preview Code Starts 
     ======================================= -->
     <div class="main">
-    <p>Booking Confirmed. <br/>Sent mail to sponsor sucessfully.</p>
-
+    <p>Booking Confirmed. <br/>Successfully sent mail to Sponsor.</p>
+    <a href="../php/admin_booking.php"><button class="btn back-button">Back</button></a>
+    </div>
     <!--
     ===========================================
     footer Code Starts 
